@@ -59,7 +59,7 @@ if __name__ == '__main__':
         distance = read_distance()
         if distance:
             print "distance: %.1f cm" % (distance)
-            os.system("mosquitto_pub -h beam.soracom.io -t beam_ws001 -m 'Hello PubNub from Beam!'")
+            os.system("mosquitto_pub -h beam.soracom.io -t beam_ws001 -m '%.1f'" % (distance))
             
 
         # wait for next loop
